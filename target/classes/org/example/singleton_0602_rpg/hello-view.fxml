@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" prefHeight="657.0" prefWidth="765.0" spacing="20.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.singleton_0602_rpg.LuaController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <Pane prefHeight="651.0" prefWidth="771.0">
+        <children>
+            <!-- Campo de Data -->
+            <Label layoutX="230.0" layoutY="30.0" style="-fx-font-size: 14px; -fx-font-weight: bold;" text="Selecione uma data:" />
+            <DatePicker fx:id="seletorData" layoutX="230.0" layoutY="55.0" onAction="#aoSelecionarData" prefWidth="300.0" />
+
+            <!-- Botões de Navegação -->
+            <HBox layoutX="200.0" layoutY="95.0" spacing="10.0" />
+
+            <!-- Título -->
+            <Label layoutX="250.0" layoutY="140.0" style="-fx-font-size: 24px; -fx-font-weight: bold;" text="FASE LUNAR" />
+
+            <!-- Emoji GIGANTE da Lua -->
+            <Label fx:id="lblEmojiGigante" alignment="CENTER" layoutX="220.0" layoutY="180.0" prefHeight="250.0" prefWidth="320.0" style="-fx-font-size: 180px;" text="🌑" />
+
+            <!-- Informações -->
+            <VBox layoutX="50.0" layoutY="440.0" prefWidth="660.0" spacing="10.0">
+                <Label fx:id="lblFase" alignment="CENTER" prefWidth="660.0" style="-fx-font-size: 20px; -fx-font-weight: bold;" text="Lua Nova" textAlignment="CENTER" />
+
+                <Label fx:id="lblDia" alignment="CENTER" prefWidth="660.0" style="-fx-font-size: 14px;" text="Data: 07/02/2026 | Dia do ciclo: 1/29" textAlignment="CENTER" />
+
+                <Label fx:id="lblDetalhe" alignment="CENTER" prefWidth="660.0" style="-fx-font-size: 12px; -fx-text-fill: #666666;" text="Lua totalmente invisível no céu" textAlignment="CENTER" wrapText="true" />
+
+                <!-- Barra de Iluminação -->
+                <VBox alignment="CENTER" spacing="5.0">
+                    <Label style="-fx-font-size: 12px;" text="Iluminação:" />
+                    <ProgressBar fx:id="barraIluminacao" prefHeight="25.0" prefWidth="400.0" progress="0.0" />
+                    <Label fx:id="lblPercentual" style="-fx-font-size: 12px; -fx-font-weight: bold;" text="0%" />
+                </VBox>
+            </VBox>
+             <Button layoutX="409.0" layoutY="98.0" onAction="#aoDiaSeguinte" prefWidth="120.0" text="Dia Seguinte ►" />
+             <Button layoutX="220.0" layoutY="98.0" onAction="#aoDiaAnterior" prefWidth="120.0" text="◄ Dia Anterior" />
+        </children>
+    </Pane>
+</VBox>
