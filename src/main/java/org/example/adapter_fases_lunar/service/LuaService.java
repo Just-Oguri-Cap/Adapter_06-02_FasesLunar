@@ -1,10 +1,9 @@
 package org.example.adapter_fases_lunar.service;
 
-import org.example.adapter_fases_lunar.FaseLunar;
 import org.example.adapter_fases_lunar.Lua;
 import org.example.adapter_fases_lunar.relatorios.GerarRelatorio;
 import org.example.adapter_fases_lunar.relatorios.RelatorioCientifico;
-import org.example.adapter_fases_lunar.relatorios.RelatorioAdpterLegado;
+import org.example.adapter_fases_lunar.relatorios.RelatorioAdapterLegado;
 
 import java.time.LocalDate;
 
@@ -37,7 +36,7 @@ public class LuaService {
 
         GerarRelatorio relatorio = cientifico
                 ? new RelatorioCientifico()
-                : new RelatorioAdpterLegado();
+                : new RelatorioAdapterLegado();
 
         // RelatorioCientifico recebe diaDoCiclo, RelatorioAdpterLegado traduz FaseLunar para o legado
         return relatorio.getDetalheFase(lua.getDiaDoCiclo());
